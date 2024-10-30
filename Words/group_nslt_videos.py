@@ -1,5 +1,5 @@
 # This script organizes the ASL videos into folders based on the word being signed.
-# It reads video metadata from a JSON file and uses a word mapping from the class_list text file to identify the signed word.
+# It reads video metadata from the nslt JSON file and uses a word mapping from the class_list text file to identify the signed word.
 # For each video, the script creates a folder named after the signed word, and copies the video into that folder.
 import os
 import json
