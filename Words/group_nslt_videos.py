@@ -7,7 +7,7 @@ import shutil
 
 # Load the JSON file
 # Change the filename below to extract and group more/less videos
-with open('nslt_100.json', 'r') as f:
+with open('nslt_10.json', 'r') as f:
     video_data = json.load(f)
 
 # Load the mapping file
@@ -24,6 +24,7 @@ def get_signed_word(action):
 
 # Path to the folder where all videos are currently located
 videos_folder = 'videos'
+missing_videos_folder = 'missing_videos'
 
 # Path to the destination directory where the word-named folders will be created
 destination_root_folder = 'grouped_videos'
@@ -41,14 +42,19 @@ for video_id, details in video_data.items():
     
     # Construct the video file path
     video_file = os.path.join(videos_folder, f'{video_id}.mp4')  # Assuming videos are all .mp4 files
-    
+    missing_video_file = os.path.join(missing_videos_folder, f'{video_id}.mp4')
+
     # Check if the video exists and copy it to the appropriate folder
     if os.path.exists(video_file):
         destination_file = os.path.join(destination_folder, f'{video_id}.mp4')
         shutil.copy(video_file, destination_file)
         print(f'Copied {video_id}.mp4 to {destination_folder}')
-    else:
-        print(f'Video {video_id}.mp4 not found in {videos_folder}')
+    elif os.path.exists(missing_video_file): # Check if video not found in "videos" checking missing_videos and copy it to the appropriate folder
+        destination_file = os.path.join(destination_folder, f'{video_id}.mp4')
+        shutil.copy(missing_video_file, destination_file)
+        print(f'Copied {video_id}.mp4 to {destination_folder}')
+    else: # Video not found in either folder
+        print(f'Video {video_id}.mp4 not found in folders')
     video_counter += 1
     
 print(f'{video_counter} Videos Processed')
