@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-# Odyssey-ASL
-=======
-=======
->>>>>>> bc06f8e7e9872f81ea3ab707e984cb6f0b28992f
 # Odyssey-ASL: 3D CNN for Video Classification
 ## Description
 This project implements a 3D Convolutional Neural Network (3D CNN) for video classification using PyTorch. 
