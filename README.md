@@ -15,11 +15,7 @@ of videos into categories such as gestures, actions, or objects.
 - Virtual environment (recommended for dependency isolation)
 ## Data Preparation
 - Use the Google Drive to download this root folder named "videos_5". This root folder is used for dataset training and place it in the same folder.
-<<<<<<< HEAD
 - Besides, it also have the demo videos named "3_classes_asl_test.mp4". This is showed how the model is detected through 3 classes.
 - Drive link: https://drive.google.com/drive/u/0/folders/1vGaj86z5qTL7P7fxzSJtoezwfY1i-i4_
 
->>>>>>> Stashed changes
-=======
 
->>>>>>> bc06f8e7e9872f81ea3ab707e984cb6f0b28992f
