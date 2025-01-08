@@ -108,7 +108,7 @@ def main():
     # root_folder = "preprocessed_tensors_1"  # Update with your dataset's root folder
     # root_folder = "preprocessed_tensors_3"  # Update with your dataset's root folder
     root_folder = "preprocessed_tensors_5"  # Update with your dataset's root folder
-    model_path = "3D_CNN_Model_5Classes_2024_12_30__19_24_34_Loss1.1161_Acc75.00.pth"  # Update with your model path
+    model_path = "3D_CNN_Model_5Classes_2025_01_08__14_52_38_Loss0.7501_Acc80.00.pth"  # Update with your model path
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Detect class names
