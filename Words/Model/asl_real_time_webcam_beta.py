@@ -1,3 +1,4 @@
+# Uses the 3D CNN Model with real-time webcam input 
 import os
 import datetime as dt
 import torch
